@@ -38,7 +38,7 @@ type LicenseValidatorIface interface {
 
 type LicenseValidatorImpl struct {
 }
-
+/*
 func (l *LicenseValidatorImpl) LicenseFromBytes(licenseBytes []byte) (*model.License, *model.AppError) {
 	licenseStr, err := l.ValidateLicense(licenseBytes)
 	if err != nil {
@@ -52,7 +52,7 @@ func (l *LicenseValidatorImpl) LicenseFromBytes(licenseBytes []byte) (*model.Lic
 
 	return &license, nil
 }
-
+*/
 func (l *LicenseValidatorImpl) ValidateLicense(signed []byte) (string, error) {
 	decoded := make([]byte, base64.StdEncoding.DecodedLen(len(signed)))
 
